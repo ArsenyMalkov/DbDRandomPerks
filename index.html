@@ -1,1 +1,79 @@
-<h1>Hello World!</h1>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url('background_fixed.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: auto;
+                background-position: center;
+                background-color: #040604;
+                display: flex;
+                justify-content: center;
+            }
+            .images {
+                position: fixed;
+                top: 70%;
+                text-align:center;
+                margin:50px auto;
+            }
+            .images figure{
+                margin:0px 20px;
+                display:inline-block;
+                text-decoration:none;
+                color:black;
+            }
+            .button {
+                position: fixed;
+                top: 91%;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: #a12f2f; 
+                color: white; 
+                border: 2px solid #a12f2f;
+            }
+            .button:hover {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="images">
+            <figure>
+                <img class="perk" src="Perks/deliverance.webp">
+                <figcaption style="color: white;">PerkNameHere1</figcaption>
+            </figure>
+            <figure>
+                <img class="perk" src="Perks/potential_energy.webp">
+                <figcaption style="color: white;">PerkNameHere2</figcaption>
+            </figure>
+            <figure>
+                <img class="perk" src="Perks/deliverance.webp">
+                <figcaption style="color: white;">PerkNameHere3</figcaption>
+            </figure>
+            <figure>
+                <img class="perk" src="Perks/deliverance.webp">
+                <figcaption style="color: white;">PerkNameHere4</figcaption>
+            </figure>
+        </div>
+        <button class="button" onclick="randomPerks()">Random!</button>
+
+        <script>
+            function randomPerks() {
+                const perkList = document.querySelectorAll(".perk")
+                for (let i = 0; i < perkList.length; i++) {
+                    perkList[i].src = `Perks/image${Math.floor(Math.random() * 2) + 1}.webp`;
+                }
+            }
+        </script>
+    </body>
+</html>
