@@ -48,6 +48,11 @@
                 position: absolute;
                 top: 980px;
             }
+            br {
+                content: " ";
+                display: block;
+                margin: 1em;
+            }
         </style>
     </head>
     <body>
@@ -80,7 +85,7 @@
             function randomPerks() {
                 randomPerkNumber = []
                 while (randomPerkNumber.length != 4) {
-                    randomPerkNumber.push(Math.floor(Math.random() * perks.length) + 1)
+                    randomPerkNumber.push(Math.floor(Math.random() * perks.length))
                 }
                 const perkImgList = document.querySelectorAll(".perk")
                 for (let i = 0; i < perkImgList.length; i++) {
