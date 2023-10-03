@@ -49,19 +49,19 @@
     <body>
         <div class="images">
             <figure>
-                <img class="perk" src="perks/deliverance.webp">
+                <img class="perk" src="perks/image1.webp">
                 <figcaption style="color: white;">PerkNameHere1</figcaption>
             </figure>
             <figure>
-                <img class="perk" src="perks/potential_energy.webp">
+                <img class="perk" src="perks/image1.webp">
                 <figcaption style="color: white;">PerkNameHere2</figcaption>
             </figure>
             <figure>
-                <img class="perk" src="perks/deliverance.webp">
+                <img class="perk" src="perks/image1.webp">
                 <figcaption style="color: white;">PerkNameHere3</figcaption>
             </figure>
             <figure>
-                <img class="perk" src="perks/deliverance.webp">
+                <img class="perk" src="perks/image2.webp">
                 <figcaption style="color: white;">PerkNameHere4</figcaption>
             </figure>
         </div>
@@ -71,7 +71,7 @@
             function randomPerks() {
                 const perkList = document.querySelectorAll(".perk")
                 for (let i = 0; i < perkList.length; i++) {
-                    perkList[i].src = `Perks/image${Math.floor(Math.random() * 2) + 1}.webp`;
+                    perkList[i].src = `perks/image${Math.floor(Math.random() * 2) + 1}.webp`;
                 }
             }
         </script>
